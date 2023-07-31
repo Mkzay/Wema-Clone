@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #151515;
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+main .first h3 {
+    color: #FFF;
+    text-align: center;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+main .first h3 span {
+    color: #970B3F; 
+}
+
+main .second {
+    width: 13.68306rem;
+    height: 13.4375rem;
+}
+
+main .third {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+main .third button {
+    width: 19.75rem;
+    height: 2.625rem;
+    padding: 0.625rem;
+    border: none;
+    border-radius: 0.1875rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+main .third #log-In {
+    background: #FFF;
+    color: #994C64;
+}
+
+main .third #Sign-Up {
+    background: #9F083F;
+    color: #FFFFFF;
+}
+
+footer {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 2.75rem;
+    margin-top: 2.4rem;
+}
+
+footer i {
+    position: absolute;
+    font-size: 1.8rem;
+    color: #7A1E40;
+    transform: translateX(-35px) translateY(5px);
+}

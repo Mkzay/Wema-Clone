@@ -1,19 +1,48 @@
-window.addEventListener("load", function() {
-    const imageCarousel = document.getElementById("imageCarousel");
-    const images = imageCarousel.getElementsByTagName("img");
-    let currentImageIndex = 0;
+const txT1 = document.getElementById('text-1');
+const txT2 = document.getElementById('text-2');
+const img1 = document.getElementById('image-1');
 
-    function showNextImage() {
-        images[currentImageIndex].style.display = "none";
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-        images[currentImageIndex].style.display = "block";
-    }
+let textS1 = [
+    'Work or play?',
+    'Dont just make moves,'
+];
 
-    // Hide all images initially except the first one
-    for (let i = 1; i < images.length; i++) {
-        images[i].style.display = "none";
-    }
+let textS2 = [
+    'Go all out with ALAT',
+    'Be Audacious'
+];
 
-    // Set an interval to change images every 3 seconds (adjust as needed)
-    setInterval(showNextImage, 3000);
-});
+let images = [
+    '../images/amigo.svg',
+    '../images/rafiki.svg'
+];
+
+let i = 0;
+let k = 0;
+let originalText1 = txT1.innerHTML;
+let originalText2 = txT2.innerHTML;
+let originalSrc1 = img1.src;
+
+window.onload = function() {
+    setTimeout(function() {
+        if (i < textS1.length && i < textS2.length) {
+            txT1.innerHTML = textS1[i];
+            txT2.innerHTML = textS2[i];
+            i++;
+        } else {
+            txT1.innerHTML = originalText1;
+            txT2.innerHTML = originalText2;
+            i = 0;
+        }
+
+        if (k < images.length) {
+            img1.src = images[k];
+            k++;
+        } else {
+            img1.src = originalSrc1;
+            k = 0;
+        }
+
+        setTimeout(arguments.callee, 10000);
+    }, 1000);
+};

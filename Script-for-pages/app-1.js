@@ -46,3 +46,9 @@ window.onload = function() {
         setTimeout(arguments.callee, 10000);
     }, 1000);
 };
+
+const logIn = document.getElementById('log-In');
+
+logIn.addEventListener('click', function(){
+    window.location.href = 'Sign-In.html';
+});

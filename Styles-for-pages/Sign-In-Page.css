@@ -54,12 +54,21 @@ h2 {
 .first form .one input[type=text], input[type=password] {
     width: 19.75rem;
     height: 0.0625rem;
-    padding: 1rem;
+    padding: 1.2rem;
+    padding-left: 0;
     border: none;
     border-bottom: 1px solid #771431;;
     color: #fff;
     background-color: transparent;
     margin: 1rem 0;
+}
+
+.first form .one input[type=text], input[type=password]:focus {
+    outline: none;
+}
+
+input[type=password] {
+    margin-bottom: 0;
 }
 
 .first form .one label {
@@ -70,13 +79,22 @@ h2 {
 }
 
 .first form .one i {
-    width: 1.5rem;
+    /*width: 1.5rem;
     height: 1.5rem;
     flex-shrink: 0;
     color: #8F8F8F;
+    position: relative;
+    transform: translateX(290px) translateY(-25px);
+    margin: 0;
+    padding: 0;*/
     position: absolute;
-    left: 88%;
-    top: 47%;
+    top: 48%;
+    right: 30px;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
 }
 
 .first form a {
@@ -88,7 +106,7 @@ h2 {
     font-weight: 400;
     line-height: normal;
     position: relative;
-    right: -33%;
+    transform: translateX(105px) translateY(10px);
 }
 
 .first form .one input[type=submit] {
@@ -99,7 +117,7 @@ h2 {
     border-radius: 0.1875rem;
     background: #9F083F;
     color: #FFFFFF;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .second {
